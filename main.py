@@ -98,15 +98,15 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-new_title = '<p style="font-family:sans-serif; color:#FFFFFF; font-size: 24px;">Enter the Job Description here</p>'
+new_title = '<p style="font-family:sans-serif; color:#777; font-size: 24px;">Enter the Job Description here</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 jd_text = st.text_area("", placeholder="Enter the Job Description here")
 
 
 # Upload CVs
-new_title = '<p style="font-family:sans-serif; color:#FFFFFF; font-size: 24px;">Upload Multiple CVs</p>'
+new_title = '<p style="font-family:sans-serif; color:#777; font-size: 24px;">Upload Multiple CVs</p>'
 st.markdown(new_title, unsafe_allow_html=True)
-new_title = '<p style="font-family:sans-serif; color:#FFFFFF; font-size: 18px;">Choose CV files</p>'
+new_title = '<p style="font-family:sans-serif; color:#777; font-size: 18px;">Choose CV files</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 uploaded_files = st.file_uploader("", accept_multiple_files=True, type=["pdf"])
 
@@ -119,7 +119,7 @@ if st.button("Process"):
                 results = [future.result() for future in futures]
         
         # Display results in a table format
-        new_title = '<p style="font-family:sans-serif; color:#FFFFFF; font-size: 18px;">Matching Results</p>'
+        new_title = '<p style="font-family:sans-serif; color:#777; font-size: 18px;">Matching Results</p>'
         st.markdown(new_title, unsafe_allow_html=True)
         df = pd.DataFrame(results, columns=["Name", "Email", "Suitability Score"])
         st.write(df)
