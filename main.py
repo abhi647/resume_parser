@@ -11,7 +11,6 @@ from concurrent.futures import ThreadPoolExecutor
 # # Initialize OpenAI API
 headers= {
   "authorization": st.secrets["OPENAI_API_KEY"],
-  "content-type: "application/json"
   }
 
 
