@@ -10,6 +10,11 @@ from config import OPENAI_API_KEY
 # from dotenv import load_dotenv
 # load_dotenv()
 # # Initialize OpenAI API
+headers= {
+  "authorization": st.secrets["OPENAI_API_KEY"],
+  "content-type: "application/json"
+  }
+
 openai.api_key = OPENAI_API_KEY
 
 # Create SQLite connection
