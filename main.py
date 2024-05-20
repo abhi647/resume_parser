@@ -5,7 +5,6 @@ import fitz  # PyMuPDF
 import re  # Regular expression module for parsing
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor
-from config import OPENAI_API_KEY
 # import os
 # from dotenv import load_dotenv
 # load_dotenv()
@@ -15,7 +14,6 @@ headers= {
   "content-type: "application/json"
   }
 
-openai.api_key = OPENAI_API_KEY
 
 # Create SQLite connection
 conn = sqlite3.connect('candidates.db',check_same_thread=False)
