@@ -14,7 +14,7 @@ headers= {
   }
 
 # Create SQLite connection
-conn = sqlite3.connect('candidates.db')
+conn = sqlite3.connect('candidates.db',check_same_thread=False)
 c = conn.cursor()
 
 # Create table if it doesn't exist
